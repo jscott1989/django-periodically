@@ -3,6 +3,9 @@ from .tasks import PeriodicTask
 from .utils import get_scheduler_backend_class
 
 
+default_app_config = 'periodically.apps.PeriodicallyConfig'
+
+
 # Based on django's admin app's autodiscover.
 def autodiscover():
     """
