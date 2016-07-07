@@ -3,6 +3,13 @@ from periodically.decorators import *
 from periodically import register
 from datetime import timedelta
 
+ 
+@every(minutes=1)
+@hourly()
+@hourly() # This repetition should have no effect.
+def task1():
+    print('RUNNING exampleapp.task1') 
+
 
 @every(minutes=1)
 def task2():
